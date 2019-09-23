@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: "https://github.com/Starlink/ast/releases/download/v8.7.1/ast-8.7.1.tar.gz"
-  sha256: b9f3ef8ca130b57968e8cc8e44bce300c250d88797d1a36e3615183e28036825
+  url: "https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz"
+  sha256: c2b9932f6b57695ba6eb808f3bf9d49698295d79ca7a447783d0474d0b1fd146
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
 
 test:
   commands:
+    - test -f ${PREFIX}/include/star/ast.h
     - test -f ${PREFIX}/lib/libast${SHLIB_EXT}  # [unix]
     - test -f ${PREFIX}/lib/libast_drama${SHLIB_EXT}  # [unix]
     - test -f ${PREFIX}/lib/libast_ems${SHLIB_EXT}  # [unix]
