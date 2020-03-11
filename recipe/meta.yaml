@@ -1,17 +1,17 @@
 {% set name = "starlink-ast" %}
-{% set version = "9.1.0" %}
+{% set version = "9.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: "https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz"
-  sha256: 4d2bc77bfb0438d94007be23a4536e668b7ab72f9c343b812449e84642c0c3b9
+  url: https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz
+  sha256: c97f18d65d3b6b3c2c281f5fdfccc7ee2f4884350291bb269e910f6247c5a039
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 
 requirements:
@@ -42,7 +42,7 @@ about:
   license: LGPL
   license_file: COPYING
   summary: A Library for Handling World Coordinate Systems in Astronomy
-  description: | 
+  description: |
     The AST library provides a comprehensive range of facilities for attaching world coordinate systems to astronomical data, for retrieving and interpreting that information and for generating graphical output based on it. It's main selling points are:
 
     * Ease of use.
