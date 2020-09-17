@@ -41,7 +41,7 @@ about:
   home: http://starlink.eao.hawaii.edu/starlink/AST
   doc_url: http://starlink.eao.hawaii.edu/devdocs/sun211.htx/sun211.html
   dev_url: https://github.com/Starlink/ast
-  license: LGPL
+  license: LGPL-2.0-only
   license_file: COPYING
   summary: A Library for Handling World Coordinate Systems in Astronomy
   description: |
