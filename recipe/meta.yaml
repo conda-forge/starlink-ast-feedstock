@@ -1,5 +1,5 @@
 {% set name = "starlink-ast" %}
-{% set version = "9.2.0" %}
+{% set version = "9.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz
-  sha256: 497cbc3d67dc5c57e3f837aad5fb548e0b2af18476a3e2c3408abeaf8e00df19
+  sha256: 97df4e6228ff6c625645501e601ea81319d9703fb56791e4f0a2148b18d34451
 
 build:
   number: 0
@@ -19,6 +19,8 @@ requirements:
     - make
     - {{ compiler('c') }}
 
+  host:
+    - yaml
 
 test:
   commands:
