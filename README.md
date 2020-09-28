@@ -3,7 +3,7 @@ About starlink-ast
 
 Home: http://starlink.eao.hawaii.edu/starlink/AST
 
-Package license: LGPL
+Package license: LGPL-2.0-only
 
 Feedstock license: BSD-3-Clause
 
