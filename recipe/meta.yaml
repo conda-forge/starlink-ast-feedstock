@@ -8,16 +8,21 @@ package:
 source:
   url: https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz
   sha256: 4d7e28a2f30cd11ded5751c9b134d2365939beb70ccd4acd75cfeec7bb76faeb
+  patches:
+    - patches/osx-11-configure.patch
+    - patches/cross-compile-makefile.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 
 requirements:
   build:
     - make
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - libtool  # [unix]
 
   host:
     - yaml

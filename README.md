@@ -5,9 +5,13 @@ Home: http://starlink.eao.hawaii.edu/starlink/AST
 
 Package license: LGPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/starlink-ast-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Library for Handling World Coordinate Systems in Astronomy
+
+Development: https://github.com/Starlink/ast
+
+Documentation: http://starlink.eao.hawaii.edu/devdocs/sun211.htx/sun211.html
 
 The AST library provides a comprehensive range of facilities for attaching world coordinate systems to astronomical data, for retrieving and interpreting that information and for generating graphical output based on it. It's main selling points are:
 
@@ -51,6 +55,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7282&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/starlink-ast-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7282&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/starlink-ast-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
