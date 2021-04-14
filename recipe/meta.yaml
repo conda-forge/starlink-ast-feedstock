@@ -1,5 +1,5 @@
 {% set name = "starlink-ast" %}
-{% set version = "9.2.3" %}
+{% set version = "9.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz
-  sha256: 4d7e28a2f30cd11ded5751c9b134d2365939beb70ccd4acd75cfeec7bb76faeb
+  sha256: 0b8dea35a73d20099686c14bae3a24dbe810e61c52c602deb09bfa4353a694f6
   patches:
     - patches/osx-11-configure.patch
     - patches/cross-compile-makefile.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 
