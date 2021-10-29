@@ -1,13 +1,13 @@
---- Makefile.in.orig	2021-01-07 08:05:37.000000000 -0800
-+++ Makefile.in	2021-01-07 08:30:05.000000000 -0800
-@@ -94,6 +94,14 @@
+--- Makefile.in.orig	2021-10-29 13:14:11.000000000 +0100
++++ Makefile.in	2021-10-29 13:18:59.000000000 +0100
+@@ -93,6 +93,14 @@
+ POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
- noinst_PROGRAMS = astbad$(EXEEXT)
 +
 +cross_compiling = @cross_compiling@
 +ifeq ($(cross_compiling),yes)
-+  src_run = 
++  src_run =
 +else
 +  src_run = ./
 +endif
@@ -15,16 +15,17 @@
  TESTS = ast_test$(EXEEXT)
  check_PROGRAMS = ast_test$(EXEEXT)
  subdir = .
-@@ -4476,9 +4484,9 @@
+@@ -4526,9 +4534,9 @@
  .PRECIOUS: Makefile
  
- AST_PAR: ast_par.source astbad
--	sed -e 's/<AST__BAD>/'`./astbad AST__BAD | tr 'E' 'D'`'/' \
--	    -e 's/<AST__NAN>/'`./astbad AST__NAN | tr 'E' 'D'`'/' \
--	    -e 's/<AST__NANR>/'`./astbad AST__NANF | tr 'E' 'D'`'/' \
-+	sed -e 's/<AST__BAD>/'`$(src_run)astbad AST__BAD | tr 'E' 'D'`'/' \
-+	    -e 's/<AST__NAN>/'`$(src_run)astbad AST__NAN | tr 'E' 'D'`'/' \
-+	    -e 's/<AST__NANR>/'`$(src_run)astbad AST__NANF | tr 'E' 'D'`'/' \
- 	    ast_par.source >$@
+ @NOFORTRAN_FALSE@AST_PAR: $(srcdir)/ast_par.source astbad$(EXEEXT)
+-@NOFORTRAN_FALSE@	sed -e 's/<AST__BAD>/'`./astbad$(EXEEXT) AST__BAD | tr 'E' 'D'`'/' \
+-@NOFORTRAN_FALSE@	    -e 's/<AST__NAN>/'`./astbad$(EXEEXT) AST__NAN | tr 'E' 'D'`'/' \
+-@NOFORTRAN_FALSE@	    -e 's/<AST__NANR>/'`./astbad$(EXEEXT) AST__NANF | tr 'E' 'D'`'/' \
++@NOFORTRAN_FALSE@	sed -e 's/<AST__BAD>/'`$(src_run)astbad$(EXEEXT) AST__BAD | tr 'E' 'D'`'/' \
++@NOFORTRAN_FALSE@	    -e 's/<AST__NAN>/'`$(src_run)astbad$(EXEEXT) AST__NAN | tr 'E' 'D'`'/' \
++@NOFORTRAN_FALSE@	    -e 's/<AST__NANR>/'`$(src_run)astbad$(EXEEXT) AST__NANF | tr 'E' 'D'`'/' \
+ @NOFORTRAN_FALSE@	    $(srcdir)/ast_par.source >$@
  
  # ast.h depends on the error-facility files.  ast.h _could_ be made
+
