@@ -19,9 +19,6 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == 1 ]]; then
 
     ./configure --prefix=$BUILD_PREFIX --libdir=$BUILD_PREFIX/lib --without-fortran --without-stardocs --without-pthreads --without-topinclude
 
-    # We need this executable natively for cross builds
-    make astbad
-
     popd
   )
   export PATH=`pwd`/native-build:$PATH
