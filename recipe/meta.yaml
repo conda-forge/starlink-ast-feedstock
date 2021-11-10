@@ -11,9 +11,10 @@ source:
   patches:
     - patches/osx-11-configure.patch
     - patches/cross-compile-makefile.patch
+    - patches/link-libm.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 
