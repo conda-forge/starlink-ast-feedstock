@@ -30,14 +30,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/starlink-ast-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/starlink-ast-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -209,5 +202,4 @@ Feedstock Maintainers
 
 * [@brianv0](https://github.com/brianv0/)
 * [@timj](https://github.com/timj/)
-
 
