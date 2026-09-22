@@ -1,5 +1,5 @@
 {% set name = "starlink-ast" %}
-{% set version = "9.4.1" %}
+{% set version = "9.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,7 @@ package:
 
 source:
   url: https://github.com/Starlink/ast/releases/download/v{{ version }}/ast-{{ version }}.tar.gz
-  sha256: 6703d3a532adfe7a859ad42add97a04e29a539a74d14aa9335216445def4472a
-  patches:
-    # Temporary: fixed upstream, drop when a release carrying the fix is out.
-    - patches/macos-keep-satellite-libs.patch  # [osx]
+  sha256: d7a5cd67d53617e83fda9d5e480a66ccee966ca31bfcb0ae26fa2fac9bfd2d0c
 
 build:
   number: 0
